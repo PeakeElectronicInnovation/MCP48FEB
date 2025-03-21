@@ -40,7 +40,7 @@ MCP48FEB variants:
 1. Add the following to your `platformio.ini` file:
 ```ini
 lib_deps =
-    https://github.com/PeakeElectronicInnovation/MCP48FEB
+    https://github.com/PeakeElectronicInnovation/MCP48FEB.git
 ```
 
 ## Hardware Connections
