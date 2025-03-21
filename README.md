@@ -17,10 +17,14 @@ An Arduino library for controlling the Microchip MCP48FEBxx family of dual-chann
 
 ## Supported Devices
 
-This library supports the following MCP48FEBxx devices:
-- MCP48FEB01: Dual 12-bit DAC with internal EEPROM and SPI interface
-- MCP48FEB02: Dual 12-bit DAC with internal EEPROM and SPI interface
-- Other variants in the MCP48FEBxx family
+This library is tested against the MCP48FEB22 12-bit 2 channel DAC, other variants should work but have not been tested.
+MCP48FEB variants:
+- MCP48FEB01 8-bit single channel
+- MCP48FEB02 8-bit dual channel
+- MCP48FEB11 10-bit single channel
+- MCP48FEB12 10-bit dual channel
+- MCP48FEB21 12-bit single channel
+- MCP48FEB22 12-bit dual channel
 
 ## Installation
 
@@ -36,7 +40,7 @@ This library supports the following MCP48FEBxx devices:
 1. Add the following to your `platformio.ini` file:
 ```ini
 lib_deps =
-    MCP48FEB
+    https://github.com/PeakeElectronicInnovation/MCP48FEB
 ```
 
 ## Hardware Connections
@@ -163,7 +167,7 @@ bool setGain_EEROM(uint8_t channel, MCP48FEBxx_GAIN gain);
 bool writeDAC_EEPROM(uint8_t channel, uint16_t value);
 int saveRegistersToEEPROM(void);
 ```
-These functions write configuration to the non-volatile EEPROM memory. The settings will be retained even after power is removed.
+These functions write configuration to the non-volatile EEPROM memory. The settings will be retained even after power is removed. This allows the user to specify the state of the DAC on reset so that now unsafe or erratic conditions occur on startup.
 
 ## License
 
@@ -171,4 +175,4 @@ This library is released under the [MIT License](LICENSE).
 
 ## Author
 
-Developed by the Open Reactor Control System team, 2025.
+Developed by J. Peake, 2025.
