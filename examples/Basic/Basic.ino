@@ -2,7 +2,7 @@
  * MCP48FEB Basic Example
  * 
  * This example demonstrates the basic functionality of the MCP48FEB library
- * for controlling the MCP48FEBxx family of dual-channel 12-bit DACs.
+ * for controlling the MCP48FEBxx family of SPI interfaced DACs.
  * 
  * The example shows:
  * - Initializing the DAC
@@ -16,7 +16,7 @@
  * - Connect the LAT pin to the pin specified in the dac_lat_pin variable (optional)
  * - Connect SPI pins (MOSI, MISO, SCK) to the corresponding Arduino pins
  * 
- * Written by Your Name, March 2025
+ * Written by J Peake, March 2025
  */
 
 #include <MCP48FEB.h>

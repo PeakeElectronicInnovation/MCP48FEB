@@ -2,7 +2,7 @@
  * MCP48FEB Full Functional Test
  * 
  * This example demonstrates comprehensive testing of the MCP48FEB library
- * for controlling the MCP48FEBxx family of dual-channel 12-bit DACs.
+ * for controlling the MCP48FEBxx family of SPI interfaced DACs.
  * 
  * The example tests:
  * - All initialization methods
